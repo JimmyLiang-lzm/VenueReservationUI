@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>场地预约</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-info navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand mb-0 h1">场地预约</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">预约入校</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">场地预约</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">进楼预约</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">我的</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-light">
+        <div style="background: url('img/gym001.jpg') no-repeat center;background-size: cover">
+            <div class="bg-dark text-white bg-opacity-50">
+                <div class="container px-2 pt-1 pb-4">
+                    <h2 class="text-center pt-3">创新创业园会议室</h2>
+                </div>
+                <div class="px-3 pb-2">
+                    <p class="my-0">开放日期：2022-01-05 至 2022-06-07</p>
+                    <p class="my-0">开放时间：周一至周五8:30-21:30</p>
+                    <p class="my-0">预约状态：可预约</p>
+                    <p class="my-0">公告：在会议室租借过程中，请保护好环境卫生，爱护器件。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light p-2">
+        <div class="container">
+            <div class="accordion shadow p-2 bg-body rounded" id="placeAccordion">
+                <!--已预订信息-->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="beenReserAccHeader">
+                        <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#beenReserAccArea" aria-expanded="true" aria-controls="beenReserAccArea">
+                            已预订信息
+                        </button>
+                    </h3>
+                    <div class="accordion-collapse collapse show" id="beenReserAccArea" aria-labelledby="beenReserAccHeader">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">2022-01-09 11:00 至 2022-01-09 13:00 已预订</li>
+                                <li class="list-group-item">2022-01-10 8:30 至 2022-01-10 11:00 已预订</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--预定表单-->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="ToReserAccHeader">
+                        <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#ToReserAccArea" aria-expanded="false" aria-controls="ToReserAccArea">
+                            预订场地
+                        </button>
+                    </h3>
+                    <div class="accordion-collapse collapse" id="ToReserAccArea" aria-labelledby="ToReserAccHeader">
+                        <div class="accordion-body">
+                            <form action="#" class="need-validation" method="post" novalidate>
+                                <div class="row mb-1 mt-1">
+                                    <label for="UserIdentity" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">身份</label>
+                                    <div class="col-sm-10">
+                                        <select name="UserIdentity" id="UserIdentity" class="form-select" onchange="bas()" required>
+                                            <option value>选择您的身份</option>
+                                            <option value="0">学生</option>
+                                            <option value="1">校内教职工</option>
+                                        </select>
+                                        <div class="invalid-feedback">请选择您的身份</div>
+                                    </div>
+                                </div>
+                                <!--学生填写表单处-->
+                                <div id="StudentModel" style="display: none">
+                                    <div class="row mb-1">
+                                        <label for="StuID" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">学号</label>
+                                        <div class="col-sm-10">
+                                            <input name="StuID" type="number" class="form-control form-control-sm fs-6" id="StuID" placeholder="输入您的学号">
+                                            <div class="invalid-feedback">请输入正确的学号</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <label for="StuName" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">学生姓名</label>
+                                        <div class="col-sm-10">
+                                            <input name="StuName" type="text" class="form-control form-control-sm fs-6" id="StuName" placeholder="留下您的学生姓名">
+                                            <div class="invalid-feedback">请输入正确的学生姓名</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <label for="StuSchool" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">所在院系</label>
+                                        <div class="col-sm-10">
+                                            <input name="StuSchool" type="text" class="form-control form-control-sm fs-6" id="StuSchool" placeholder="输入您所在的院系">
+                                            <div class="invalid-feedback">请填写正确的院系</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--教职工填写表单处-->
+                                <div id="TeacherModel" style="display: none">
+                                    <div class="row mb-1">
+                                        <label for="TeaID" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">教职工编号</label>
+                                        <div class="col-sm-10">
+                                            <input name="TeaID" type="number" class="form-control form-control-sm fs-6" id="TeaID" placeholder="输入您的编号">
+                                            <div class="invalid-feedback">请输入正确的教职工编号</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <label for="TeaName" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">职员姓名</label>
+                                        <div class="col-sm-10">
+                                            <input name="TeaName" type="text" class="form-control form-control-sm fs-6" id="TeaName" placeholder="留下您的姓名">
+                                            <div class="invalid-feedback">输入正确的姓名</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <label for="TeaUnit" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">所属部门</label>
+                                        <div class="col-sm-10">
+                                            <input name="TeaUnit" type="text" class="form-control form-control-sm fs-6" id="TeaUnit" placeholder="输入您所属部门">
+                                            <div class="invalid-feedback">请输入正确的部门</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-1">
+                                    <label for="contactTEL" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">联系电话</label>
+                                    <div class="col-sm-10">
+                                        <input name="contactTEL" type="tel" class="form-control form-control-sm fs-6" id="contactTEL" placeholder="输入您的联系电话">
+                                        <div class="invalid-feedback">请输入正确的联系电话</div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-1">
+                                    <label for="StartDate" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">开始时间</label>
+                                    <label for="StartTime" style="display: none"></label>
+                                    <div class="input-group col-sm-10">
+                                        <input name="StartDate" type="date" class="form-control form-control-sm fs-6" id="StartDate">
+                                        <div class="invalid-feedback">请输入正确的开始日期</div>
+                                        <input name="StartTime" type="time" class="form-control form-control-sm fs-6" id="StartTime">
+                                        <div class="invalid-feedback">请输入正确的开始时间</div>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <label for="EndDate" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">结束时间</label>
+                                    <label for="EndTime" style="display: none"></label>
+                                    <div class="input-group col-sm-10">
+                                        <input name="EndDate" type="date" class="form-control form-control-sm fs-6" id="EndDate">
+                                        <div class="invalid-feedback">请输入正确的结束日期</div>
+                                        <input name="EndTime" type="time" class="form-control form-control-sm fs-6" id="EndTime">
+                                        <div class="invalid-feedback">请输入正确的结束时间</div>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <label for="extInformation" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">备注信息</label>
+                                    <div class="col-sm-10">
+                                        <input name="extInformation" type="text" class="form-control form-control-sm fs-6" id="extInformation" placeholder="需要准备的（请提前至少一天）">
+                                        <div class="invalid-feedback">请输入您需要我们所准备的</div>
+                                    </div>
+                                </div>
+                                <div class="row mb-1">
+                                    <label for="extFileUpload" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">附加文件上传</label>
+                                    <div class="col-sm-10">
+                                        <input name="extFileUpload" class="form-control" type="file" id="extFileUpload">
+                                        <div class="invalid-feedback">文件上传失败</div>
+                                    </div>
+                                </div>
+
+                                <!--需要审核的时候才显示此选项-->
+                                <div style="display: block;">
+                                    <div class="row mb-1">
+                                        <label for="AccessResult" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">预约原因</label>
+                                        <div class="col-sm-10">
+                                            <input name="AccessResult" type="text" class="form-control form-control-sm fs-6" id="AccessResult" placeholder="输入您的访问原因">
+                                            <div class="invalid-feedback">请输入您的预约原因</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <label for="MasterPhoneNUM" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">审核人电话</label>
+                                        <div class="col-sm-10">
+                                            <input name="MasterPhoneNUM" type="tel" class="form-control form-control-sm fs-6" id="MasterPhoneNUM" placeholder="输入审核人电话" required>
+                                            <div class="invalid-feedback">请输入正确的审核人号码</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="my-4">
+                                <!--表单提交-->
+                                <div class="row mb-1">
+                                    <button class="col btn btn-info btn-lg ms-3 me-3 mb-2 text-white" type="button" data-bs-toggle="modal" data-bs-target="#comfirmBox">提交场地申请</button>
+                                </div>
+                                <!--表单确认提交-->
+                                <div class="modal fade" id="comfirmBox" tabindex="-1" aria-labelledby="ComfirmModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ComfirmModalLabel">确认提交</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <p>您确认提交场地的使用申请？</p>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">取消</button>
+                                        <button type="submit" class="btn btn-success">提交申请</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/core.js"></script>
+    <script>
+        window.onload = function (message){
+            insertDefaultDatetime();
+            bas();
+        }
+    </script>
+</body>
+</html>
