@@ -66,7 +66,26 @@ function bas() {
     }
 }
 
-
+function eas() {
+    let iv = document.getElementById('uIdentity').value;
+    if(iv === "1"){
+        document.getElementById('StudentModel').style.display = "";
+        document.getElementById('TeacherModel').style.display = "none";
+        document.getElementById('ParentModel').style.display = "none";
+    }else if(iv === "2"){
+        document.getElementById('StudentModel').style.display = "none";
+        document.getElementById('TeacherModel').style.display = "";
+        document.getElementById('ParentModel').style.display = "none";
+    }else if(iv === "3"){
+        document.getElementById('StudentModel').style.display = "none";
+        document.getElementById('TeacherModel').style.display = "none";
+        document.getElementById('ParentModel').style.display = "";
+    }else {
+        document.getElementById('StudentModel').style.display = "none";
+        document.getElementById('TeacherModel').style.display = "none";
+        document.getElementById('ParentModel').style.display = "none";
+    }
+}
 
 function fileChange(target, id) {
     var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
