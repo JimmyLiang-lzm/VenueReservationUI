@@ -43,7 +43,7 @@
                     <div class="row mb-1 mt-1">
                         <label for="MasterPhoneNUM" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">审核人电话</label>
                         <div class="col-sm-10">
-                            <input name="MasterPhoneNUM" type="tel" class="form-control form-control-sm fs-6" id="MasterPhoneNUM" placeholder="输入审核人电话" required>
+                            <input name="MasterPhoneNUM" type="tel" class="form-control form-control-sm fs-6 is-valid" id="MasterPhoneNUM" placeholder="输入审核人电话" required>
                             <div class="invalid-feedback">请输入正确的电话号码</div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                     <div class="row mb-1">
                         <label for="GuestID" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">证件类型</label>
                         <div class="col-sm-10">
-                            <select name="GuestID" id="GuestID" class="form-select" required>
+                            <select name="GuestID" id="GuestID" class="form-select is-invalid" required>
                                 <option value="0">身份证</option>
                                 <option value="1">护照</option>
                                 <option value="2">港澳通行证</option>
@@ -124,13 +124,13 @@
                     <div class="row mb-1">
                         <label for="extFileUpload" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">附加文件上传</label>
                         <div class="col-sm-10">
-                            <input name="extFileUpload" class="form-control" type="file" id="extFileUpload">
+                            <input name="extFileUpload" class="form-control" type="file" id="extFileUpload" onchange="fileChange(this)">
                             <div class="invalid-feedback">文件上传失败</div>
                         </div>
                     </div>
 
                     <div class="form-check form-switch mt-3 mb-1">
-                        <input name="isParents" class="form-check-input" type="checkbox" role="switch" id="isParents" value="501" onclick="ips()">
+                        <input name="isParents" class="form-check-input" type="checkbox" role="switch" id="isParents" value="501" onclick="ips()" >
                         <label class="form-check-label fw-bold fs-6" for="isParents">是否为学生家长</label>
                     </div>
 
@@ -196,6 +196,7 @@
     <script>
         window.onload = function (message) {
             insertDefaultDatetime();
+            ips();
         }
     </script>
 </body>
