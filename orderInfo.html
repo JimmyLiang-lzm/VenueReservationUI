@@ -2,15 +2,16 @@
 <html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <title>我的凭证</title>
+    <title>预约详情</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg bg-info navbar-dark fixed-top">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand mb-0 h1">凭证信息</a>
+            <a href="#" class="navbar-brand mb-0 h1">预约详情</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,14 +37,13 @@
     <section class="p-3">
         <div class="container mt-2 mb-4">
             <div class="shadow border border-secondary rounded">
-                <div class="m-3 d-flex text-center justify-content-center">
-                    <img src="img/checkmark_true.svg" alt="" width="50">
-                    <h2 class="m-3 fw-bold">预约许可有效</h2>
+                <div class="my-3 d-flex text-center justify-content-center">
+                    <h2 class="fw-bold mb-0">入校申请详情</h2>
                 </div>
                 <div class="mb-2 px-2">
                     <hr>
                 </div>
-                <div class="d-flex flex-column px-4">
+                <div class="mt-2 d-flex flex-column px-4">
                     <div class="d-flex">
                         <p class="mb-1 fw-bold" style="width: 6rem">访客姓名：</p>
                         <p class="mb-1 text-break">张三</p>
@@ -80,23 +80,16 @@
                         <p class="mb-1 fw-bold" style="width: 6rem">备注：</p>
                         <p class="mb-1 text-break" style="width: 10rem">无</p>
                     </div>
-                    <div class="d-flex flex-column">
-                        <p class="mb-1 fw-bold">校验二维码：</p>
-                        <div class="px-4 mt-1 mb-4" onclick="randomHexColor()" id="verifyIMG" style="border-width: 5px; border-color: white; border-style: solid">
-                            <img class="img-fluid" src="img/ecode.png" alt="">
-                        </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">附件：</p>
+                        <a class="mb-1 text-break" style="width: 10rem" href="img/njit.png">点击此处下载</a>
                     </div>
                 </div>
+                <div class="my-2 px-2"></div>
             </div>
         </div>
     </section>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-        function randomHexColor() {
-            //随机生成十六进制颜色
-            document.getElementById('verifyIMG').style.borderColor = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6);
-        }
-    </script>
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>

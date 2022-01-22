@@ -35,12 +35,12 @@
     </nav>
 
     <section class="p-2">
-        <section class="container mt-2">
+        <div class="container mt-2">
             <div class="row g-4 mb-4">
                 <div class="col">
                     <div class="card bg-white shadow">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="card-title ms-2 mt-2 mb-0">预约号：RXB7E69FD5F064</h5>
+                            <h5 class="card-title ms-2 mt-2 mb-0">预约号:RXB7E69FD5F064</h5>
                             <small class="fs-6 text-white mt-2 me-2 badge bg-success rounded-pill">已通过</small>
                         </div>
                         <div class="px-2">
@@ -64,7 +64,7 @@
                 <div class="col">
                     <div class="card bg-white shadow">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="card-title ms-2 mt-2 mb-0">预约号：RXB7E69FD5F064</h5>
+                            <h5 class="card-title ms-2 mt-2 mb-0">预约号:RXB7E69FD5F064</h5>
                             <small class="fs-6 text-white mt-2 me-2 badge rounded-pill bg-warning">审核中</small>
                         </div>
                         <div class="px-2">
@@ -78,7 +78,25 @@
                             <hr class="mt-1 px-2 mb-2">
                         </div>
                         <div class="d-grid gap-2 d-flex justify-content-end ms-2">
-                            <a class="btn btn-danger me-2 mb-2" type="button" href="#">取消预约</a>
+                            <a class="btn btn-danger me-2 mb-2" type="button" data-bs-toggle="modal" data-bs-target="#comfirmBox">取消预约</a>
+                            <!--表单确认提交-->
+                            <div class="modal fade" id="comfirmBox" tabindex="-1" aria-labelledby="ComfirmModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="ComfirmModalLabel">确认提交</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <p>您确认提交预约申请？</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <a type="button" class="btn btn-danger" data-bs-dismiss="modal">取消</a>
+                                    <a type="button" class="btn btn-success">提交申请</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -86,7 +104,7 @@
                 <div class="col">
                     <div class="card bg-white shadow">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="card-title ms-2 mt-2 mb-0">预约号：RXB7E69FD5F064</h5>
+                            <h5 class="card-title ms-2 mt-2 mb-0">预约号:RXB7E69FD5F064</h5>
                             <span class="fs-6 text-white mt-2 me-2 badge rounded-pill bg-danger">未通过</span>
                         </div>
                         <div class="px-2">
@@ -110,7 +128,7 @@
                 <div class="col">
                     <div class="card bg-white shadow">
                         <div class="d-flex w-100 justify-content-between">
-                            <h5 class="card-title ms-2 mt-2 mb-0">预约号：RXB7E69FD5F064</h5>
+                            <h5 class="card-title ms-2 mt-2 mb-0">预约号:RXB7E69FD5F064</h5>
                             <small class="fs-6 text-white mt-2 me-2 badge bg-secondary rounded-pill">已失效</small>
                         </div>
                         <div class="px-2">
@@ -156,7 +174,7 @@
                 </div>
 
             </div>
-        </section>
+        </div>
     </section>
 
     <!--

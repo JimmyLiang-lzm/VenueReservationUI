@@ -4,3 +4,8 @@ body::before{
     height: 56px;
 }
 
+.banner{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
