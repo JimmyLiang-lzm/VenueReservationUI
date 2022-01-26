@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>预定修改</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-info navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand mb-0 h1">预定修改</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">预约入校</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">场地预约</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">进楼预约</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">我的</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--入校表单修改-->
+    <section class="p-2 bg-light">
+        <div class="container">
+            <h5 class="p-2 fw-bold">预约修改：POB7E6A5C5B342</h5>
+        </div>
+        <div class="container mb-3">
+            <div class="shadow p-2 bg-body rounded">
+                <form action="#" class="need-validation" method="post" enctype="multipart/form-data" novalidate><!--在输入框的class中加入is-invalid表示验证未通过-->
+                    <div class="row mb-1 mt-1">
+                        <label for="MasterPhoneNUM" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">审核人电话</label>
+                        <div class="col-sm-10">
+                            <input name="MasterPhoneNUM" type="tel" class="form-control form-control-sm fs-6" id="MasterPhoneNUM" placeholder="输入审核人电话" required>
+                            <div class="invalid-feedback">请输入正确的电话号码</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="GuestName" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">访客姓名</label>
+                        <div class="col-sm-10">
+                            <input name="GuestName" type="text" class="form-control form-control-sm fs-6" id="GuestName" placeholder="如何称呼您？" required>
+                            <div class="invalid-feedback">请输入您的称呼</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="GuestPhoneNUM" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">访客电话</label>
+                        <div class="col-sm-10">
+                            <input name="GuestPhoneNUM" type="tel" class="form-control form-control-sm fs-6" id="GuestPhoneNUM" placeholder="您的电话？" required>
+                            <div class="invalid-feedback">请输入正确的电话号码</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="GuestID" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">证件类型</label>
+                        <div class="col-sm-10">
+                            <select name="GuestID" id="GuestID" class="form-select" required>
+                                <option value="0">身份证</option>
+                                <option value="1">护照</option>
+                                <option value="2">港澳通行证</option>
+                                <option value="3">台胞证</option>
+                            </select>
+                            <div class="invalid-feedback">请选择您的证件</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="IDNUM" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">证件号码</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control form-control-sm fs-6" id="IDNUM" placeholder="输入您的证件号码" required>
+                            <div class="invalid-feedback">请输入正确的证件号码</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="AccessPlace" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">访问区域</label>
+                        <div class="col-sm-10">
+                            <input name="AccessPlace" type="text" class="form-control form-control-sm fs-6" id="AccessPlace" placeholder="默认为“全校区”，特殊情况请联系审核员" required>
+                            <div class="invalid-feedback">请输入您要访问的区域</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="StartDate" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">访问开始日期</label>
+                        <div class="col-sm-10">
+                            <input name="StartDate" type="date" class="form-control form-control-sm fs-6" id="StartDate">
+                            <div class="invalid-feedback">请输入正确的开始日期</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="EndDate" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">访问结束时间</label>
+                        <div class="col-sm-10">
+                            <input name="EndDate" type="date" class="form-control form-control-sm fs-6" id="EndDate">
+                            <div class="invalid-feedback">正确的访问日期应大于开始日期一天以上</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="CarID" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">随行车辆</label>
+                        <div class="col-sm-10">
+                            <input name="CarID" type="text" class="form-control form-control-sm fs-6" id="CarID" placeholder="有随行车辆请填写车牌号，否则不填">
+                            <div class="invalid-feedback">请输入正确的车牌号</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="CampusContacts" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">校内联系人</label>
+                        <div class="col-sm-10">
+                            <input name="CampusContacts" type="text" class="form-control form-control-sm fs-6" id="CampusContacts" placeholder="填写联系人姓名，若无则不填">
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="WhatToDo" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">到访事由</label>
+                        <div class="col-sm-10">
+                            <input name="WhatToDo" type="text" class="form-control form-control-sm fs-6" id="WhatToDo" placeholder="输入来访事宜" required>
+                            <div class="invalid-feedback">请输入您的来访事宜</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1">
+                        <label for="extFileUpload" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">附加文件上传</label>
+                        <div class="col-sm-10">
+                            <input name="extFileUpload" class="form-control" type="file" id="extFileUpload" onchange="fileChange(this)">
+                            <div class="invalid-feedback">文件上传失败</div>
+                        </div>
+                    </div>
+
+                    <div class="form-check form-switch mt-3 mb-1">
+                        <input name="isParents" class="form-check-input" type="checkbox" role="switch" id="isParents" value="501" onclick="ips()" >
+                        <label class="form-check-label fw-bold fs-6" for="isParents">是否为学生家长</label>
+                    </div>
+
+                    <div class="row mb-1" id="stuNameDIV" style="display:none">
+                        <label for="stuName" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">学生姓名</label>
+                        <div class="col-sm-10">
+                            <input name="stuName" type="text" class="form-control form-control-sm fs-6" id="stuName" placeholder="输入学生的姓名">
+                            <div class="invalid-feedback">请输入正确的学生姓名</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1" id="stuidDIV" style="display:none">
+                        <label for="stuID" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">学生学号</label>
+                        <div class="col-sm-10">
+                            <input name="stuID" type="text" class="form-control form-control-sm fs-6" id="stuID" placeholder="输入学生的学号">
+                            <div class="invalid-feedback">请输入正确的学生学号</div>
+                        </div>
+                    </div>
+                    <div class="row mb-1" id="stuSchoolDIV" style="display:none">
+                        <label for="stuSchool" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">学生院系</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control form-control-sm fs-6" id="stuSchool" placeholder="输入学生所在的院系">
+                            <div class="invalid-feedback">所在院系填写有误</div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+                    <!--表单提交-->
+                    <div class="row mb-1">
+                        <button class="col btn btn-info btn-lg ms-3 me-3 mb-2 text-white" type="button" data-bs-toggle="modal" data-bs-target="#comfirmBox">提交预约修改</button>
+                    </div>
+                    <!--表单确认提交-->
+                    <div class="modal fade" id="comfirmBox" tabindex="-1" aria-labelledby="ComfirmModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="ComfirmModalLabel">确认修改</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <p>您确认修改该预约申请？</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-success">提交修改</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>window.onload=function(message){ips();}</script>
+    <script src="js/core.js"></script>
+
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

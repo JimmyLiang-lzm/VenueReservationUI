@@ -37,6 +37,25 @@ function insertDefaultDatetime() {
     }
 }
 
+function iddpo() {
+    let day = new Date();
+    day = new Date(day.setDate(day.getDate()+1));
+    let obj_sd = document.getElementById('StartDate');
+    let obj_st = document.getElementById('StartTime');
+    if(obj_sd){
+        obj_sd.value = day.format("yyyy-MM-dd");
+    }
+    if(obj_st){
+        obj_st.value = day.format("hh:mm");
+    }
+    let houradd = new Date(day.setHours(day.getHours()+1));
+    let obj_et = document.getElementById('EndTime');
+    if(obj_et){
+        obj_et.value = houradd.format("hh:mm");
+    }
+}
+
+
 function ips() {
     if(document.getElementById("isParents").checked)
     {

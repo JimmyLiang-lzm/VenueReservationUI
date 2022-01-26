@@ -41,7 +41,7 @@
                 </div>
                 <div class="px-3 pb-2">
                     <p class="my-0">开放日期：2022-01-05 至 2022-06-07</p>
-                    <p class="my-0">开放时间：周一至周五8:30-21:30</p>
+                    <p class="my-0">开放时间：周一至周五&nbsp;8:30-21:30</p>
                     <p class="my-0">预约状态：可预约</p>
                     <p class="my-0">公告：在会议室租借过程中，请保护好环境卫生，爱护器件。</p>
                 </div>
@@ -63,7 +63,7 @@
                             <ul class="list-group">
                                 <li class="list-group-item">2022-01-09 11:00 至 2022-01-09 13:00 已预订</li>
                                 <li class="list-group-item">2022-01-10 8:30 至 2022-01-10 11:00 已预订</li>
-                                <li class="list-group-item text-center">暂无预定</li>
+                                <li class="list-group-item text-center fs-5">暂无预定</li>
                             </ul>
                         </div>
                         <!--分页栏-->
@@ -98,7 +98,7 @@
                     </h3>
                     <div class="accordion-collapse collapse" id="ToReserAccArea" aria-labelledby="ToReserAccHeader">
                         <div class="accordion-body">
-                            <form action="#" class="need-validation" method="post" novalidate>
+                            <form action="#" class="need-validation" method="post" enctype="multipart/form-data" novalidate>
                                 <div class="row mb-1 mt-1">
                                     <label for="UserIdentity" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">身份</label>
                                     <div class="col-sm-10">
@@ -169,21 +169,19 @@
                                 </div>
 
                                 <div class="row mb-1">
-                                    <label for="StartDate" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">开始时间</label>
-                                    <label for="StartTime" style="display: none"></label>
+                                    <label for="StartDate" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">预约日期</label>
                                     <div class="input-group col-sm-10">
                                         <input name="StartDate" type="date" class="form-control form-control-sm fs-6" id="StartDate">
-                                        <div class="invalid-feedback">请输入正确的开始日期</div>
-                                        <input name="StartTime" type="time" class="form-control form-control-sm fs-6" id="StartTime">
-                                        <div class="invalid-feedback">请输入正确的开始时间</div>
+                                        <div class="invalid-feedback">预约时间必须提前2小时</div>
                                     </div>
                                 </div>
                                 <div class="row mb-1">
-                                    <label for="EndDate" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">结束时间</label>
+                                    <label for="StartTime" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">预约时间</label>
                                     <label for="EndTime" style="display: none"></label>
                                     <div class="input-group col-sm-10">
-                                        <input name="EndDate" type="date" class="form-control form-control-sm fs-6" id="EndDate">
-                                        <div class="invalid-feedback">请输入正确的结束日期</div>
+                                        <input name="StartTime" type="time" class="form-control form-control-sm fs-6" id="StartTime">
+                                        <span class="input-group-text">-</span>
+                                        <div class="invalid-feedback">请输入正确的开始时间</div>
                                         <input name="EndTime" type="time" class="form-control form-control-sm fs-6" id="EndTime">
                                         <div class="invalid-feedback">请输入正确的结束时间</div>
                                     </div>
@@ -202,7 +200,6 @@
                                         <div class="invalid-feedback">文件上传失败</div>
                                     </div>
                                 </div>
-
                                 <!--需要审核的时候才显示此选项-->
                                 <div style="display: block;">
                                     <div class="row mb-1">
@@ -252,13 +249,13 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/core.js"></script>
     <script>
         window.onload = function (message){
-            insertDefaultDatetime();
+            iddpo();
             bas();
         }
     </script>
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>
