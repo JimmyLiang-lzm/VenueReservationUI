@@ -141,6 +141,7 @@
                     <hr class="my-4">
                     <div class="row mb-1">
                         <button class="col btn btn-info btn-md mx-3 mb-2 text-white" type="button" data-bs-toggle="modal" data-bs-target="#comfirmBox">提交修改</button>
+                        <button class="col btn btn-danger btn-md mx-3 mb-2" type="button" data-bs-toggle="modal" data-bs-target="#comfirmBox2">取消绑定</button>
                     </div>
 
                     <!--表单确认提交-->
@@ -157,6 +158,24 @@
                           <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">取消</button>
                             <button type="submit" class="btn btn-success">确认修改</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--表单确认提交-->
+                    <div class="modal fade" id="comfirmBox2" tabindex="-1" aria-labelledby="ComfirmModalLabel2" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="ComfirmModalLabel2">确认提交</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <p>您确认取消身份绑定？</p>
+                          </div>
+                          <div class="modal-footer">
+                            <a class="btn btn-danger" data-bs-dismiss="modal">取消</a>
+                            <a href="#" class="btn btn-success">确认解绑</a>
                           </div>
                         </div>
                       </div>

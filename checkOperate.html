@@ -1,10 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>审核操作</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
 </head>
 <body>
 
+    <nav class="navbar navbar-expand-lg bg-info navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand mb-0 h1">审核操作</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">预约入校</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">场地预约</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">进楼预约</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">我的</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="p-3">
+        <div class="container mt-2 mb-4">
+            <div class="shadow border border-secondary rounded">
+                <div class="my-3 d-flex text-center justify-content-center">
+                    <h2 class="fw-bold mb-0">入校申请详情</h2>
+                </div>
+                <div class="mb-2 px-2">
+                    <hr>
+                </div>
+                <div class="mt-2 d-flex flex-column px-4">
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">访客姓名：</p>
+                        <p class="mb-1 text-break">张三</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">访客身份：</p>
+                        <p class="mb-1 text-break">普通访客</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">校内联系人：</p>
+                        <p class="mb-1 text-break" style="width: 10rem">王五</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">访问区域：</p>
+                        <p class="mb-1 text-break" style="width: 10rem">全校区</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">开始访问：</p>
+                        <p class="mb-1 text-break" style="width: 10rem">2022年01月06日</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">结束访问：</p>
+                        <p class="mb-1 text-break" style="width: 10rem">2022年01月07日</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">随行车辆：</p>
+                        <p class="mb-1 text-break" style="width: 10rem">苏A66666</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">来访事由：</p>
+                        <p class="mb-1 text-break" style="width: 10rem">新生报到，行李搬运，或学校开放日。</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">备注：</p>
+                        <p class="mb-1 text-break" style="width: 10rem">无</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="mb-1 fw-bold" style="width: 6rem">附件：</p>
+                        <a class="mb-1 text-break" style="width: 10rem" href="img/njit.png">点击此处下载</a>
+                    </div>
+                </div>
+                <div class="my-2 px-2">
+                    <hr>
+                </div>
+                    <div class="d-grid d-flex gap-3 mx-3 justify-content-center">
+                        <button class="btn btn-success mb-2" type="button" data-bs-toggle="modal" data-bs-target="#comfirmBox">通过审核</button>
+                        <button class="btn btn-danger mb-2" type="button" data-bs-toggle="modal" data-bs-target="#rejectBox">拒绝通过</button>
+                        <button class="btn btn-secondary mb-2" type="button" data-bs-toggle="modal" data-bs-target="#retractBox">撤回通过</button>
+                    </div>
+                    <!--通过审核提交-->
+                    <form action="#" method="post" class="need-validation" novalidate>
+                    <div class="modal fade" id="comfirmBox" tabindex="-1" aria-labelledby="ComfirmModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="ComfirmModalLabel">确认通过</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row mb-2">
+                                <label for="comfirmfeedbody" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">您确认通过该申请？若有需要请填写备注：</label>
+                                <div class="col-sm-10">
+                                    <textarea name="feedbody" class="form-control form-control-sm fs-6" id="comfirmfeedbody" placeholder="若需要请填写备注" style="height: 7rem"></textarea>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-success">确认通过</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </form>
+                    <!--拒绝审核提交-->
+                    <form action="#" method="post" class="need-validation" novalidate>
+                    <div class="modal fade" id="rejectBox" tabindex="-1" aria-labelledby="rejectModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="rejectModalLabel">确认拒绝</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row mb-2">
+                                <label for="rejectfeedbody" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">您确认拒绝该申请？若有需要请填写备注：</label>
+                                <div class="col-sm-10">
+                                    <textarea name="feedbody" class="form-control form-control-sm fs-6" id="rejectfeedbody" placeholder="若需要请填写备注" style="height: 7rem"></textarea>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-success">确认拒绝</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </form>
+                    <!--收回审核提交-->
+                    <form action="#" method="post" class="need-validation" novalidate>
+                    <div class="modal fade" id="retractBox" tabindex="-1" aria-labelledby="retractModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="retractModalLabel">确认撤回</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="row mb-2">
+                                <label for="retractfeedbody" class="col-sm-2 col-form-label col-form-label-sm fw-bold fs-6">您确认撤回该申请？若有需要请填写备注：</label>
+                                <div class="col-sm-10">
+                                    <textarea name="feedbody" class="form-control form-control-sm fs-6" id="retractfeedbody" placeholder="若需要请填写备注" style="height: 7rem"></textarea>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-success">确认撤回</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>
