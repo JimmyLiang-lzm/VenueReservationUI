@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>科创中心信息化后台管理 | 待审核</title>
+  <title>科创中心信息化后台管理 | (当前页)</title>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -388,132 +388,143 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h2 class="m-0">待审核预约</h2>
+            <h2 class="m-0">页面设置</h2>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">首页</a></li>
-              <li class="breadcrumb-item active">待审核预约</li>
+              <li class="breadcrumb-item active">页面设置</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <div class="content">
-      <div class="container-fluid">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">预约列表</h3>
-          </div>
-          <div class="card-body table-responsive">
-            <div class="row mb-3">
-              <!-- Button Group -->
-              <div class="col-8">
-                <div class="btn-group">
-                  <div class="dropdown pb-1">
-                    <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="seletOrderType" data-toggle="dropdown" aria-expanded="false">
-                      按预约类型显示
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="seletOrderType">
-                      <a class="dropdown-item" href="#"><i class="fas fa-border-all px-2"></i>显示全部</a>
-                      <a class="dropdown-item" href="#"><i class="fas fa-school px-2"></i>入校预约</a>
-                      <a class="dropdown-item" href="#"><i class="fas fa-building px-2"></i>进楼预约</a>
-                      <a class="dropdown-item" href="#"><i class="fas fa-map-marked px-2"></i>场地预约</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-group">
-                    <div class="dropdown pb-1">
-                    <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="orderByTime" data-toggle="dropdown" aria-expanded="false">
-                      时间先后顺序显示
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="orderByTime">
-                      <a class="dropdown-item" href="#"><i class="fas fa-sort-amount-up px-2"></i>时间倒序</a>
-                      <a class="dropdown-item" href="#"><i class="fas fa-sort-amount-down px-2"></i>时间正序</a>
-                    </div>
-                  </div>
-                  </div>
-              </div>
-              <!-- Searching Group -->
-              <div class="col-4">
-                <form action="#" method="get">
-                  <div class="input-group input-group-sm">
-                      <input type="search" name="kw" class="form-control form-control-sm" placeholder="输入订单号/姓名/工号/单位进行查询">
-                      <div class="input-group-append">
-                          <button type="submit" class="btn btn-sm btn-default">
-                              <i class="fa fa-search"></i>
-                          </button>
-                      </div>
-                  </div>
-                </form>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!--第一分栏-->
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">公告撰写</h3>
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
               </div>
             </div>
-            <!--Table-->
-            <table class="table table-head-fixed text-nowrap mb-3" style="position: relative;">
-              <thead>
-                <tr>
-                  <th>预约号</th>
-                  <th>预约类型</th>
-                  <th>申请人</th>
-                  <th>状态</th>
-                  <th>申请时间</th>
-                  <th>截止时间</th>
-                  <th>操作</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>JLB7E6D3B6D312</td>
-                  <td>进楼申请</td>
-                  <td>梁哲铭</td>
-                  <td><span class="text-warning">待审核</span></td>
-                  <td>2022-02-02 11:30:15</td>
-                  <td>2022-02-04 00:00:00</td>
-                  <td>
-                    <a type="button" class="btn btn-primary" href="#">审核操作</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>JLB7E6D3B6D312</td>
-                  <td>进楼申请</td>
-                  <td>梁哲铭</td>
-                  <td><span class="text-warning">待审核</span></td>
-                  <td>2022-02-02 11:30:15</td>
-                  <td>2022-02-04 00:00:00</td>
-                  <td>
-                    <a type="button" class="btn btn-primary" href="#">审核操作</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="text-center h5">暂无待审核预约单</p>
-            <!--Pagination-->
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-end">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="inputName">公告标题</label>
+                <input type="text" id="inputName" class="form-control" name="infoTitle" value="公告">
+              </div>
+              <div class="form-group">
+                <label for="inputDescription">公告内容</label>
+                <textarea id="inputDescription" class="form-control" name="infoBody" rows="5">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
+              </div>
+              <div class="row">
+                <div class="col-6 p-2">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" name="inShow" value="501" id="customSwitch1" checked>
+                    <label class="custom-control-label" for="customSwitch1">显示公告信息</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <button class="btn btn-primary float-right">提交公告</button>
+                </div>
+              </div>
+            </div>
+            <!-- /.card-body -->
           </div>
+          <!-- /.card -->
         </div>
+        <!--第二分栏-->
+        <div class="col-md-6">
+          <div class="card card-info">
+            <div class="card-header">
+              <h3 class="card-title">滚动幻灯片设置</h3>
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <form action="#" method="post">
+                <div class="input-group p-2">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                    <label class="custom-file-label" for="inputGroupFile04" data-browse="浏览">选择图片</label>
+                  </div>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">上传图片</button>
+                  </div>
+                </div>
+              </form>
+              <div class="p-0">
+                <hr>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>文件名</th>
+                    <th>文件大小</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Functional-requirements.png</td>
+                    <td>49.8005 kb</td>
+                    <td class="text-right py-0 align-middle">
+                      <div class="btn-group btn-group-sm">
+                        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                      </div>
+                    </td>
+                  <tr>
+                    <td>UAT.jpg</td>
+                    <td>28.4883 kb</td>
+                    <td class="text-right py-0 align-middle">
+                      <div class="btn-group btn-group-sm">
+                        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                      </div>
+                    </td>
+                  <tr>
+                    <td>Email-from-flatbal.png</td>
+                    <td>57.9003 kb</td>
+                    <td class="text-right py-0 align-middle">
+                      <div class="btn-group btn-group-sm">
+                        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                      </div>
+                    </td>
+                  <tr>
+                    <td>Logo.png</td>
+                    <td>50.5190 kb</td>
+                    <td class="text-right py-0 align-middle">
+                      <div class="btn-group btn-group-sm">
+                        <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                      </div>
+                    </td>
+
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
         </div>
-    </div>
+      </div>
+    </section>
+    <!-- /.content -->
   </div>
 
 

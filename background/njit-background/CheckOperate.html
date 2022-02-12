@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>科创中心信息化后台管理 | 待审核</title>
+  <title>科创中心信息化后台管理 | (当前页)</title>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -393,12 +393,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h2 class="m-0">待审核预约</h2>
+            <h2 class="m-0">预约详情</h2>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">首页</a></li>
-              <li class="breadcrumb-item active">待审核预约</li>
+              <li class="breadcrumb-item"><a href="#">待审核预约</a></li>
+              <li class="breadcrumb-item active">预约详情</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -408,111 +409,72 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">预约列表</h3>
+            <h3 class="card-title">订单号：JLB7E6D3B6D312</h3>
           </div>
-          <div class="card-body table-responsive">
-            <div class="row mb-3">
-              <!-- Button Group -->
-              <div class="col-8">
-                <div class="btn-group">
-                  <div class="dropdown pb-1">
-                    <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="seletOrderType" data-toggle="dropdown" aria-expanded="false">
-                      按预约类型显示
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="seletOrderType">
-                      <a class="dropdown-item" href="#"><i class="fas fa-border-all px-2"></i>显示全部</a>
-                      <a class="dropdown-item" href="#"><i class="fas fa-school px-2"></i>入校预约</a>
-                      <a class="dropdown-item" href="#"><i class="fas fa-building px-2"></i>进楼预约</a>
-                      <a class="dropdown-item" href="#"><i class="fas fa-map-marked px-2"></i>场地预约</a>
-                    </div>
-                  </div>
+          <form action="#" method="post">
+            <div class="card-body">
+              <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">通过状态：</p>
+                    <p class="mb-1 text-break">未通过</p>
                 </div>
-                <div class="btn-group">
-                    <div class="dropdown pb-1">
-                    <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="orderByTime" data-toggle="dropdown" aria-expanded="false">
-                      时间先后顺序显示
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="orderByTime">
-                      <a class="dropdown-item" href="#"><i class="fas fa-sort-amount-up px-2"></i>时间倒序</a>
-                      <a class="dropdown-item" href="#"><i class="fas fa-sort-amount-down px-2"></i>时间正序</a>
-                    </div>
-                  </div>
-                  </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">访客姓名：</p>
+                    <p class="mb-1 text-break">张三</p>
+                </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">访客身份：</p>
+                    <p class="mb-1 text-break">普通访客</p>
+                </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">校内联系人：</p>
+                    <p class="mb-1 text-break">王五</p>
+                </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">访问区域：</p>
+                    <p class="mb-1 text-break">全校区</p>
+                </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">开始访问：</p>
+                    <p class="mb-1 text-break">2022年01月06日</p>
+                </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">结束访问：</p>
+                    <p class="mb-1 text-break">2022年01月07日</p>
+                </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">随行车辆：</p>
+                    <p class="mb-1 text-break">苏A66666</p>
+                </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">来访事由：</p>
+                    <p class="mb-1 text-break">新生报到，行李搬运，或学校开放日。</p>
+                </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">备注：</p>
+                    <p class="mb-1 text-break">无</p>
+                </div>
+                <div class="d-flex">
+                    <p class="mb-1 font-weight-bold">附件：</p>
+                    <a class="mb-1 text-break" href="img/njit.png">点击此处下载（请谨慎打开该附件！）</a>
+                </div>
               </div>
-              <!-- Searching Group -->
-              <div class="col-4">
-                <form action="#" method="get">
-                  <div class="input-group input-group-sm">
-                      <input type="search" name="kw" class="form-control form-control-sm" placeholder="输入订单号/姓名/工号/单位进行查询">
-                      <div class="input-group-append">
-                          <button type="submit" class="btn btn-sm btn-default">
-                              <i class="fa fa-search"></i>
-                          </button>
-                      </div>
-                  </div>
-                </form>
+              <div class="col-12 col-md-6">
+                <label for="feedback">管理员审核留言：</label>
+                <textarea name="masterNote" id="feedback" class="col-12 form-control" style="height: 10rem;" placeholder="请输入您的留言，在拒绝通过与撤销通过情况下必须填写。"></textarea>
+                <div class="valid-feedback">请输入您的留言！</div>
               </div>
+                </div>
             </div>
-            <!--Table-->
-            <table class="table table-head-fixed text-nowrap mb-3" style="position: relative;">
-              <thead>
-                <tr>
-                  <th>预约号</th>
-                  <th>预约类型</th>
-                  <th>申请人</th>
-                  <th>状态</th>
-                  <th>申请时间</th>
-                  <th>截止时间</th>
-                  <th>操作</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>JLB7E6D3B6D312</td>
-                  <td>进楼申请</td>
-                  <td>梁哲铭</td>
-                  <td><span class="text-warning">待审核</span></td>
-                  <td>2022-02-02 11:30:15</td>
-                  <td>2022-02-04 00:00:00</td>
-                  <td>
-                    <a type="button" class="btn btn-primary" href="#">审核操作</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>JLB7E6D3B6D312</td>
-                  <td>进楼申请</td>
-                  <td>梁哲铭</td>
-                  <td><span class="text-warning">待审核</span></td>
-                  <td>2022-02-02 11:30:15</td>
-                  <td>2022-02-04 00:00:00</td>
-                  <td>
-                    <a type="button" class="btn btn-primary" href="#">审核操作</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="text-center h5">暂无待审核预约单</p>
-            <!--Pagination-->
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-end">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+            <div class="card-footer text-center">
+              <a type="button" class="btn btn-success m-2" href="#">通过审核</a>
+              <a type="button" class="btn btn-danger m-2" href="#">拒绝通过</a>
+              <a type="button" class="btn btn-secondary m-2" href="#">撤回通过</a>
+            </div>
+          </form>
         </div>
-        </div>
+      </div>
     </div>
   </div>
 
